@@ -1,0 +1,429 @@
+/* Reset dan Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #00aeff 0%, #009dff 100%);
+    color: #333;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container Utama */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+h2 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #00ffcc 0%, #73f0a3 100%);
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+/* Link Styles */
+a {
+    display: inline-block;
+    text-align: center;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #00ffea 0%, #05ffde 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgb(0, 255, 255);
+    margin: 10px 5px;
+}
+
+a:hover {
+    background: linear-gradient(135deg, #000000 0%, #000000 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(227, 30, 36, 0.5);
+}
+
+a:active {
+    transform: translateY(0);
+}
+
+/* Form Container */
+form {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    max-width: 700px;
+    margin: 30px auto;
+}
+
+/* Form Labels */
+label {
+    display: block;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Form Inputs */
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #00ffd0;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(227, 30, 36, 0.1);
+}
+
+/* Select Dropdown */
+select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    padding-right: 40px;
+}
+
+select option {
+    padding: 10px;
+}
+
+/* Textarea */
+textarea {
+    resize: vertical;
+    min-height: 120px;
+    font-family: inherit;
+}
+
+/* Button Styles */
+button[type="submit"],
+input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #00ffa6 0%, #00ff95 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(23, 148, 107, 0.849);
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover,
+input[type="submit"]:hover {
+    background: linear-gradient(135deg, #00ffae 0%, #00ffa6 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(24, 158, 104, 0.871);
+}
+
+button[type="submit"]:active,
+input[type="submit"]:active {
+    transform: translateY(0);
+}
+
+/* Table Container */
+.table-wrapper {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    margin: 30px auto;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    background: white;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+/* Table Header */
+thead {
+    background: linear-gradient(135deg, #21b499 0%, #2afbdc 100%);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+th {
+    padding: 20px 12px;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    white-space: nowrap;
+    background: linear-gradient(135deg, hwb(166 0% 0%) 0%, #00ffb3 100%);
+}
+
+th:last-child {
+    border-right: none;
+}
+
+th:first-child {
+    width: 50px;
+}
+
+/* Table Body */
+td {
+    padding: 16px 12px;
+    text-align: center;
+    border-bottom: 1px solid #e9ecef;
+    color: #2d3436;
+    vertical-align: middle;
+    font-size: 0.9rem;
+}
+
+td:first-child {
+    font-weight: 600;
+    color: #ff0000;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Zebra Striping */
+tbody tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+tbody tr:nth-child(odd) {
+    background: white;
+}
+
+tbody tr:hover {
+    background: linear-gradient(90deg, #fff5f5 0%, #ffe5e6 100%);
+    transition: all 0.3s ease;
+    transform: scale(1.01);
+    box-shadow: 0 2px 8px rgba(227, 30, 36, 0.1);
+}
+
+/* Action Links dalam Table */
+td a {
+    padding: 10px 24px;
+    font-size: 0.85rem;
+    margin: 0 5px;
+    display: inline-block;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Edit Button - Abu-abu */
+td a[href*="edit"] {
+    background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%);
+    box-shadow: 0 3px 10px rgba(108, 117, 125, 0.3);
+}
+
+td a[href*="edit"]:hover {
+    background: linear-gradient(135deg, #7d8590 0%, #6c757d 100%);
+    box-shadow: 0 4px 15px rgba(108, 117, 125, 0.4);
+}
+
+/* Delete Button - Merah Gelap */
+td a[onclick*="confirm"],
+td a[onclick*="Hapus"] {
+    background: linear-gradient(135deg, #00ffa2 0%, #00ffa2 100%);
+    box-shadow: 0 3px 10px rgba(220, 53, 69, 0.3);
+}
+
+td a[onclick*="confirm"]:hover,
+td a[onclick*="Hapus"]:hover {
+    background: linear-gradient(135deg, #e64555 0%, #dc3545 100%);
+    box-shadow: 0 4px 15px rgba(220, 53, 69, 0.4);
+}
+
+/* Search Form */
+form[method="GET"] {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    max-width: 700px;
+    margin: 20px auto;
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+}
+
+form[method="GET"] input[type="text"] {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+form[method="GET"] button {
+    width: auto;
+    padding: 14px 40px;
+    margin-top: 0;
+    flex-shrink: 0;
+}
+
+/* Success/Error Messages */
+p {
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 600px;
+    font-weight: 600;
+}
+
+p[style*="color:green"] {
+    background: #d4edda;
+    color: #155724 !important;
+    border: 2px solid #c3e6cb;
+}
+
+p[style*="color:red"] {
+    background: #f8d7da;
+    color: #721c24 !important;
+    border: 2px solid #f5c6cb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    form {
+        padding: 25px 20px;
+    }
+    
+    /* Make table container scrollable */
+    .table-wrapper {
+        overflow-x: auto;
+        border-radius: 12px;
+    }
+    
+    table {
+        min-width: 900px;
+    }
+    
+    th, td {
+        padding: 12px 8px;
+        font-size: 0.8rem;
+    }
+    
+    td a {
+        padding: 8px 16px;
+        font-size: 0.75rem;
+    }
+    
+    form[method="GET"] {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    form[method="GET"] button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    form {
+        padding: 20px 15px;
+    }
+    
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    input[type="date"],
+    select,
+    textarea {
+        font-size: 0.9rem;
+    }
+}
+
+/* Loading Animation */
+.loading {
+    text-align: center;
+    color: white;
+    padding: 20px;
+    font-size: 1.2rem;
+}
+
+/* Center alignment utilities */
+.text-center {
+    text-align: center;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Navigation Links Container */
+.nav-links {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Back Button Styling */
+a[href="index.php"] {
+    background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%);
+    box-shadow: 0 4px 15px rgba(108, 117, 125, 0.3);
+}
+
+a[href="index.php"]:hover {
+    background: linear-gradient(135deg, #7d8590 0%, #6c757d 100%);
+    box-shadow: 0 6px 20px rgba(108, 117, 125, 0.4);
+}
